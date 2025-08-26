@@ -1,7 +1,5 @@
 # 🌐 Personal Web Portfolio
 
----
-
 Saya **Frenky Riski Gilang Pratama** 🎉, dan ini adalah portofolio pribadi saya yang berisi:  
 ✨ perjalanan, 📚 pengalaman, dan 💡 proyek-proyek saya di bidang **Data, Machine Learning, dan Deep Learning**.
 

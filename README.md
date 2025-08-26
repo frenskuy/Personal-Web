@@ -12,4 +12,11 @@ Ini adalah portofolio pribadi saya, **Frenky Riski Gilang Pratama**, yang berisi
 
 ---
 
-## KONTAK
+## 📬 Kontak
+
+- 📧 **Email**: frenkygilang@gmail.com
+- 💼 **LinkedIn**: linkedin.com/in/frenkyy
+- 📸 **Instagram**: instagram.com/frenskuyy
+
+## 🖥️ Portfolio: 
+frenskuy.github.io/Personal-Web

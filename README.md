@@ -30,8 +30,3 @@ Ini adalah portofolio pribadi saya, **Frenky Riski Gilang Pratama**, yang berisi
 </p>
 
 ---
-
-## 🖥️ Portfolio: 
-frenskuy.github.io/Personal-Web
-
----

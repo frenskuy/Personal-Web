@@ -15,16 +15,16 @@ Ini adalah portofolio pribadi saya, **Frenky Riski Gilang Pratama**, yang berisi
 ## 📬 Kontak
 
 <p align="center">
-  <a href="mailto:frenkygilang@gmail.com">
+  <a href="mailto:frenkygilang@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
-  <a href="https://www.linkedin.com/in/frenkyy">
+  <a href="https://www.linkedin.com/in/frenkyy" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://www.instagram.com/frenskuyy">
+  <a href="https://www.instagram.com/frenskuyy" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
   </a>
-  <a href="https://frenskuy.github.io/Personal-Web/">
+  <a href="https://frenskuy.github.io/Personal-Web/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio">
   </a>
 </p>

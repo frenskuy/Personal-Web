@@ -1,18 +1,17 @@
 # 🌐 Personal Web Portfolio
 
-Selamat datang di repository **Personal-Web**! 🎉  
-Ini adalah portofolio pribadi saya, **Frenky Riski Gilang Pratama**, yang berisi showcase pengalaman, proyek, dan perjalanan saya di dunia **Data, Machine Learning, dan Software Development**.
+🎉 Selamat datang di repository **Personal-Web**!  
+Saya **Frenky Riski Gilang Pratama**, dan ini adalah portofolio pribadi saya yang berisi:  
+✨ perjalanan, 📚 pengalaman, dan 💡 proyek-proyek saya di bidang **Data, Machine Learning, dan Deep Learning**.
 
 ---
 
-## ✨ Fitur Utama
-- **Desain Responsif** – dapat diakses di berbagai perangkat (desktop maupun mobile).
-- **Navigasi Sederhana** – memudahkan pengunjung menjelajah informasi.
-- **Portofolio Proyek** – menampilkan karya & kontribusi saya.
+## 🚀 Fitur Utama
+✔️ **Desain Responsif** – tampilan optimal di desktop 💻 maupun mobile 📱  
+✔️ **Navigasi Sederhana** – memudahkan pengunjung menjelajahi informasi 🔎  
+✔️ **Portofolio Proyek** – menampilkan karya & kontribusi terbaik saya 📂  
 
 ---
-
-## 📬 Kontak
 
 ## 📬 Kontak & Portfolio
 

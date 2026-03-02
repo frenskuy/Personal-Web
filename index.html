@@ -1,97 +1,37 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Frenky Pratama – Portfolio</title>
-  <meta name="description" content="Portfolio pribadi Frenky Riski Gilang Pratama – Data, Machine Learning dan Project Showcase." />
+  <meta name="description"
+    content="Portfolio pribadi Frenky Riski Gilang Pratama – Data, Machine Learning dan Project Showcase." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="img/rocket.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/rocket.png" sizes="32x32>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href=" https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1222; --card:#161933; --soft:#22264a; --text:#e6e9ff; --muted:#a1a6c8; --accent:#7c5cff; --accent-2:#00d1ff;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 800px at 90% -10%, rgba(124,92,255,.15), transparent 50%),linear-gradient(180deg, #0b0e1a 0%, #0f1222 100%);color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(1100px,92vw);margin-inline:auto}
-    .btn{display:inline-flex;gap:.6rem;align-items:center;padding:.9rem 1.1rem;border-radius:14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:600;border:none;cursor:pointer}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.15)}
-    .btn:focus{outline:2px solid var(--accent-2);outline-offset:2px}
-    /* NAVBAR */
-    header{position:sticky;top:0;z-index:50;background:rgba(15,18,34,.7);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(255,255,255,.05)}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
-    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
-    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#0f1222}
-    .menu{display:flex;gap:1rem;align-items:center}
-    .menu a{padding:.45rem .7rem;border-radius:10px;color:var(--muted)}
-    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-    .mobile-toggle{display:none}
-    @media (max-width:860px){
-      .menu{position:fixed;inset:64px 0 auto 0;background:rgba(15,18,34,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06);display:none;flex-direction:column;padding:1rem}
-      .menu.open{display:flex}
-      .mobile-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.15)}
-    }
-    /* HERO */
-    .hero{padding:6rem 0 4rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
-    .hero h1{font-size:clamp(28px,4.8vw,48px);margin:.2rem 0}
-    .hero p{color:var(--muted);line-height:1.7}
-    .hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
-    .avatar{width:240px;height:240px;border-radius:24px;background:conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2));padding:4px}
-    .avatar > div{background:var(--card);width:100%;height:100%;border-radius:20px;display:grid;place-items:center;font-size:70px}
-    @media (max-width:860px){.hero{grid-template-columns:1fr;}.avatar{margin-inline:auto}}
-    /* SECTIONS */
-    section{padding:4rem 0;border-top:1px solid rgba(255,255,255,.06)}
-    section h2{font-size:clamp(22px,3.5vw,34px);margin:0 0 1rem}
-    .grid{display:grid;gap:1rem}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:860px){.grid-2,.grid-3{grid-template-columns:1fr}}
-    /* CARDS */
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:1.2rem}
-    .card:hover{border-color:rgba(255,255,255,.18)}
-    /* TIMELINE */
-    .timeline{display:grid;gap:1rem}
-    .t-item{display:grid;grid-template-columns:140px 1fr;gap:1rem}
-    .t-item .when{color:var(--muted)}
-    @media (max-width:720px){.t-item{grid-template-columns:1fr}.when{order:2}}
-    /* SKILLS */
-    .skills{display:grid;gap:1rem}
-    .skill{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:.8rem}
-    .bar{height:8px;background:var(--soft);border-radius:999px;overflow:hidden;margin-top:.6rem}
-    .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
-    /* PROJECTS */
-    .project{display:flex;flex-direction:column;gap:.8rem}
-    .thumb{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.25),rgba(0,209,255,.25));display:grid;place-items:center;font-size:28px}
-    .tags{display:flex;flex-wrap:wrap;gap:.5rem}
-    .tag{border:1px solid rgba(255,255,255,.12);padding:.25rem .55rem;border-radius:999px;color:var(--muted);font-size:.85rem}
-    /* CONTACT */
-    form{display:grid;gap:.8rem}
-    input,textarea{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:.9rem;color:var(--text);font-family:inherit}
-    input::placeholder,textarea::placeholder{color:#9aa0c3}
-    textarea{min-height:140px}
-    /* FOOTER */
-    footer{padding:2.4rem 0;color:var(--muted)}
-    .foot{display:grid;gap:1rem;grid-template-columns:1fr auto}
-    @media (max-width:680px){.foot{grid-template-columns:1fr}}
-    /* Back to top */
-    #backToTop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(15,18,34,.8);display:none;align-items:center;justify-content:center}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Space Background -->
+  <div class="bg-animation" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+  </div>
+
   <!-- ================= NAVBAR ================= -->
   <header>
     <div class="container">
       <nav aria-label="Navigasi utama">
         <a class="brand" href="#home" aria-label="Beranda">
           <span class="logo">
-            <img src="img/back biru.jpg" alt="Foto Frenky" style="width:36px;height:36px;border-radius:0%;object-fit:cover;">
+            <img src="img/back biru.jpg" alt="Foto Frenky"
+              style="width:36px;height:36px;border-radius:0%;object-fit:cover;">
           </span>
           <span>Frenky</span>
         </a>
@@ -112,62 +52,87 @@
   <main id="home" class="hero container">
     <div>
       <p style="letter-spacing:.15em;color:var(--accent-2);font-weight:700">DATA • MACHINE LEARNING</p>
-      <h1>Halo, saya <span style="color:var(--accent-2)"> Frenky Riski Gilang Pratama</span><br/>menciptakan solusi digital berbasis data.</h1>
-      <p>Saya berfokus pada pengembangan model machine learning serta visualisasi data yang informatif dan mudah dipahami. Terbuka untuk kolaborasi dalam mewujudkan solusi inovatif sesuai kebutuhan Anda.</p>
+      <h1>Halo, saya <span style="color:var(--accent-2)"> Frenky Riski Gilang Pratama</span><br />menciptakan solusi
+        digital berbasis data.</h1>
+      <p>Saya berfokus pada pengembangan model machine learning serta visualisasi data yang informatif dan mudah
+        dipahami. Terbuka untuk kolaborasi dalam mewujudkan solusi inovatif sesuai kebutuhan Anda.</p>
       <div class="cta">
         <a class="btn" href="#projects"><i class="fa-solid fa-grid-2"></i> Lihat Proyek</a>
         <a class="btn ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
       </div>
     </div>
     <div class="avatar" aria-hidden="true">
-      <img src="img/DSC02041(1).jpg" alt="Foto Frenky" style="width:100%;height:100%;border-radius:20px;object-fit:cover;">
+      <img src="img/DSC02041(1).jpg" alt="Foto Frenky"
+        style="width:100%;height:100%;border-radius:20px;object-fit:cover;">
     </div>
   </main>
 
   <!-- ================= ABOUT ================= -->
-  <section id="about">
+  <section id="about" class="reveal">
     <div class="container grid grid-2">
       <div>
         <h2>Tentang Saya</h2>
-        <p>Saya adalah seorang pengembang yang berfokus pada pengembangan solusi berbasis <strong>Machine Learning</strong> dan <strong>Deep Learning</strong> (TensorFlow, PyTorch), serta pengolahan dan visualisasi <strong>data</strong> menggunakan Python. Memiliki pengalaman dalam organisasi maupun proyek akademik, saya terbiasa mengubah ide menjadi produk digital yang bermanfaat.</p>
-        <p><em>Saat ini, saya tengah melakukan penelitian mengenai integrasi CNN dan LLM dalam klasifikasi kesehatan daun, dengan tujuan mendukung inovasi di bidang pertanian cerdas.</em></p>
-        
+        <p>Saya adalah seorang pengembang yang berfokus pada pengembangan solusi berbasis <strong>Machine
+            Learning</strong> dan <strong>Deep Learning</strong> (TensorFlow, PyTorch), serta pengolahan dan visualisasi
+          <strong>data</strong> menggunakan Python. Memiliki pengalaman dalam organisasi maupun proyek akademik, saya
+          terbiasa mengubah ide menjadi produk digital yang bermanfaat.
+        </p>
+        <p><em>Saat ini, saya tengah melakukan penelitian mengenai integrasi CNN dan LLM dalam klasifikasi kesehatan
+            daun, dengan tujuan mendukung inovasi di bidang pertanian cerdas.</em></p>
+
         <!-- Tombol unduh CV -->
-        <a class="btn" href="asset/CV FRENKY UPDATE.pdf" 
-           target="_blank" 
-           download="CV_Frenky_Riski_Gilang_Pratama.pdf">
+        <a class="btn" href="asset/CV FRENKY UPDATE.pdf" target="_blank" download="CV_Frenky_Riski_Gilang_Pratama.pdf">
           <i class="fa-solid fa-file-arrow-down"></i> Unduh CV
         </a>
       </div>
-  
+
       <div class="card">
         <h3 style="margin-top:0">Info Singkat</h3>
         <div class="grid" style="grid-template-columns:150px 1fr;gap:.6rem .8rem">
-          <div class="muted">Lokasi</div><div>Indonesia</div>
-          <div class="muted">Email</div><div><a href="mailto:frenkygilang@gmail.com">frenkygilang@gmail.com</a></div>
-          <div class="muted">Status</div><div>Available for freelance</div>
-          <div class="muted">Bahasa</div><div>ID, EN</div>
+          <div class="muted">Lokasi</div>
+          <div>Indonesia</div>
+          <div class="muted">Email</div>
+          <div><a href="mailto:frenkygilang@gmail.com">frenkygilang@gmail.com</a></div>
+          <div class="muted">Status</div>
+          <div>Available for freelance</div>
+          <div class="muted">Bahasa</div>
+          <div>ID, EN</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================= SKILLS ================= -->
-  <section id="skills">
+  <section id="skills" class="reveal">
     <div class="container">
       <h2>Keterampilan Teknis</h2>
       <div class="skills grid grid-3">
-        <div class="skill"><strong>Python</strong><div class="bar"><i style="width:90%"></i></div></div>
-        <div class="skill"><strong>R</strong><div class="bar"><i style="width:85%"></i></div></div>
-        <div class="skill"><strong>SQL</strong><div class="bar"><i style="width:80%"></i></div></div>
-        <div class="skill"><strong>Microsoft Excel</strong><div class="bar"><i style="width:85%"></i></div></div>
-        <div class="skill"><strong>Git/GitHub</strong><div class="bar"><i style="width:80%"></i></div></div>
+        <div class="skill"><strong>Python</strong>
+          <span class="percent-tooltip" style="left: 90%;">90%</span>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <div class="skill"><strong>R</strong>
+          <span class="percent-tooltip" style="left: 85%;">85%</span>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <div class="skill"><strong>SQL</strong>
+          <span class="percent-tooltip" style="left: 80%;">80%</span>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <div class="skill"><strong>Microsoft Excel</strong>
+          <span class="percent-tooltip" style="left: 85%;">85%</span>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <div class="skill"><strong>Git/GitHub</strong>
+          <span class="percent-tooltip" style="left: 80%;">80%</span>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= EXPERIENCE ================= -->
-  <section id="experience">
+  <section id="experience" class="reveal">
     <div class="container">
       <h2>Pengalaman</h2>
       <div class="timeline">
@@ -175,21 +140,24 @@
           <div class="when">2024 • Studi Independent</div>
           <div>
             <h3 style="margin:.2rem 0">Machine Learning Cohort at Bangkit Academy</h3>
-            <p>Mempelajari dan mengimplementasikan machine learning dan deep learning dalam proyek capstone. Mengembangkan model klasifikasi berbasis TensorFlow dan mengintegrasikan ke dalam solusi digital.</p>
+            <p>Mempelajari dan mengimplementasikan machine learning dan deep learning dalam proyek capstone.
+              Mengembangkan model klasifikasi berbasis TensorFlow dan mengintegrasikan ke dalam solusi digital.</p>
           </div>
         </div>
         <div class="t-item card">
           <div class="when">2024 • Kegiatan Organisasi</div>
           <div>
             <h3 style="margin:.2rem 0">Ketua Departemen PSDM BEM FAST</h3>
-            <p>Memimpin perencanaan dan pelaksanaan program pengembangan sumber daya mahasiswa. Mengkoordinasikan tim dalam pelatihan, peningkatan soft skills, serta penguatan budaya organisasi.</p>
+            <p>Memimpin perencanaan dan pelaksanaan program pengembangan sumber daya mahasiswa. Mengkoordinasikan tim
+              dalam pelatihan, peningkatan soft skills, serta penguatan budaya organisasi.</p>
           </div>
         </div>
         <div class="t-item card">
           <div class="when">2023 • Kegiatan Organisasi</div>
           <div>
             <h3 style="margin:.2rem 0">Anggota Departemen PSDM BEM FAST</h3>
-            <p>Berpartisipasi dalam merancang dan melaksanakan program kerja terkait pengembangan mahasiswa. Mendukung kegiatan pelatihan, mentoring, dan peningkatan kapasitas organisasi.</p>
+            <p>Berpartisipasi dalam merancang dan melaksanakan program kerja terkait pengembangan mahasiswa. Mendukung
+              kegiatan pelatihan, mentoring, dan peningkatan kapasitas organisasi.</p>
           </div>
         </div>
       </div>
@@ -197,137 +165,171 @@
   </section>
 
   <!-- ================= PROJECTS ================= -->
-  <section id="projects">
+  <section id="projects" class="reveal">
     <div class="container">
       <h2>Proyek Terkini</h2>
       <div class="grid grid-3">
-  
+
         <!-- Proyek 1: Analisis Penyewaan Sepeda -->
         <article class="project card">
           <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/bike rental.png" alt="Thumbnail Proyek Analisis Penyewaan Sepeda" 
-                 style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
+            <img src="img/bike rental.png" alt="Thumbnail Proyek Analisis Penyewaan Sepeda"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
           <h3>Analisis Penyewaan Sepeda</h3>
-          <p>Eksplorasi dan analisis data penyewaan sepeda menggunakan Python untuk memahami pola penggunaan, faktor musiman, dan tren permintaan.</p>
+          <p>Eksplorasi dan analisis data penyewaan sepeda menggunakan Python untuk memahami pola penggunaan, faktor
+            musiman, dan tren permintaan.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Pandas</span>
             <span class="tag">Matplotlib</span>
           </div>
-          <div style="display:flex;gap:0.5rem;">
-            <a class="btn" href="https://frenkydataanalysisproject.streamlit.app/" target="_blank" rel="noreferrer">Lihat Aplikasi</a>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn" data-title="Analisis Penyewaan Sepeda"
+              data-desc="Proyek ini melakukan eksplorasi dan analisis komprehensif terhadap dataset penyewaan sepeda. Analisis mencakup pola penyewaan harian, dampak kondisi cuaca, serta identifikasi hari-hari dengan penyewaan tertinggi. Melalui visualisasi data yang mendalam, kita dapat memahami karakteristik pengguna serta tren musiman yang memengaruhi jumlah penyewaan. Insight ini sangat berguna untuk perencanaan alokasi sepeda di masa mendatang."
+              data-img="img/bike rental.png" data-tags="Python,Pandas,Matplotlib,Seaborn,Streamlit"
+              data-link="https://frenkydataanalysisproject.streamlit.app/">
+              <i class="fa-solid fa-eye"></i> Detail
+            </button>
+            <a class="btn" href="https://frenkydataanalysisproject.streamlit.app/" target="_blank" rel="noreferrer"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
           </div>
         </article>
-  
+
         <!-- Proyek 2: Dashboard Analisis Kualitas Udara Dunia -->
         <article class="project card">
           <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/kualitas udaraa.png" alt="Thumbnail Proyek Dashboard Analisis Kualitas Udara Dunia" 
-                 style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
+            <img src="img/kualitas udaraa.png" alt="Thumbnail Proyek Dashboard Analisis Kualitas Udara Dunia"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
           <h3>Dashboard Analisis Kualitas Udara Dunia</h3>
-          <p>Pengembangan dashboard interaktif untuk memantau kualitas udara global menggunakan machine learning dan visualisasi data.</p>
+          <p>Pengembangan dashboard interaktif untuk memantau kualitas udara global menggunakan machine learning dan
+            visualisasi data.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Streamlit</span>
             <span class="tag">Data Visualization</span>
           </div>
-          <div style="display:flex;gap:0.5rem;">
-            <a class="btn" href="https://ml-kualitasudara.streamlit.app/" target="_blank" rel="noreferrer">Lihat Aplikasi</a>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn" data-title="Dashboard Analisis Kualitas Udara Dunia"
+              data-desc="Dashboard interaktif yang menampilkan tingkat kualitas udara di berbagai negara. Proyek ini mengintegrasikan model Machine Learning dan visualisasi data yang memukau untuk memprediksi serta memantau indeks polutan. Cocok bagi para peneliti lingkungan maupun institusi kesehatan untuk memahami skala polusi di sejumlah wilayah penting."
+              data-img="img/kualitas udaraa.png" data-tags="Python,Streamlit,Data Visualization,Machine Learning"
+              data-link="https://ml-kualitasudara.streamlit.app/">
+              <i class="fa-solid fa-eye"></i> Detail
+            </button>
+            <a class="btn" href="https://ml-kualitasudara.streamlit.app/" target="_blank" rel="noreferrer"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
           </div>
         </article>
-  
+
         <!-- Proyek 3: Klasifikasi Anjing dan Kucing -->
         <article class="project card">
           <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/klasifikasi hewan.png" alt="Thumbnail Proyek Klasifikasi Anjing dan Kucing" 
-                 style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
+            <img src="img/klasifikasi hewan.png" alt="Thumbnail Proyek Klasifikasi Anjing dan Kucing"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
           <h3>Klasifikasi Anjing dan Kucing</h3>
-          <p>Pembuatan model deep learning untuk mengklasifikasikan citra anjing dan kucing menggunakan Vision Transformer (ViT).</p>
+          <p>Pembuatan model deep learning untuk mengklasifikasikan citra anjing dan kucing menggunakan Vision
+            Transformer (ViT).</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Torch</span>
             <span class="tag">Deep Learning</span>
           </div>
-          <div style="display:flex;gap:0.5rem;">
-            <a class="btn" href="https://ml-klasifikasi-anjing-kucing.streamlit.app/" target="_blank" rel="noreferrer">Lihat Aplikasi</a>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn" data-title="Klasifikasi Anjing dan Kucing"
+              data-desc="Proyek ini mengimplementasikan arsitektur Vision Transformer (ViT) menggunakan PyTorch untuk mengklasifikasikan gambar hewan menjadi dua kategori: Anjing atau Kucing. Model dilatih dari awal (atau dengan fine-tuning) dan disajikan dalam bentuk antarmuka web yang dapat menerima unggahan gambar langsung dari pengguna, memberikan prediksi secara akurat dalam hitungan detik."
+              data-img="img/klasifikasi hewan.png" data-tags="Python,PyTorch,Deep Learning,Vision Transformer,Streamlit"
+              data-link="https://ml-klasifikasi-anjing-kucing.streamlit.app/">
+              <i class="fa-solid fa-eye"></i> Detail
+            </button>
+            <a class="btn" href="https://ml-klasifikasi-anjing-kucing.streamlit.app/" target="_blank"
+              rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
           </div>
         </article>
-        
+
         <!-- Proyek 4: Spam Detection -->
         <article class="project card">
           <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/spam detection.png" alt="Thumbnail Proyek Spam Detection" 
-                 style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
+            <img src="img/spam detection.png" alt="Thumbnail Proyek Spam Detection"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
           <h3>Spam Detection</h3>
-          <p>Pengembangan sistem deteksi spam pada Twitter menggunakan LLM (IBM Granite) dan visualisasi interaktif dengan Streamlit.</p>
+          <p>Pengembangan sistem deteksi spam pada Twitter menggunakan LLM (IBM Granite) dan visualisasi interaktif
+            dengan Streamlit.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Large Language Models</span>
             <span class="tag">Streamlit</span>
           </div>
-          <div style="display:flex;gap:0.5rem;">
-            <a class="btn" href="https://twitter-spam-detection.streamlit.app/" target="_blank" rel="noreferrer">Lihat Aplikasi</a>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn" data-title="Spam Detection"
+              data-desc="Aplikasi ini menggunakan Large Language Model (khususnya IBM Granite) untuk menganalisis teks dari cuitan Twitter dan menentukan apakah teks tersebut termasuk spam atau bukan. Sistem ini dirancang dengan antarmuka yang sangat ramah pengguna menggunakan Streamlit, memungkinkan demonstrasi model bahasa yang mutakhir di lingkungan web secara praktis."
+              data-img="img/spam detection.png" data-tags="Python,LLM,IBM Granite,Streamlit,NLP"
+              data-link="https://twitter-spam-detection.streamlit.app/">
+              <i class="fa-solid fa-eye"></i> Detail
+            </button>
+            <a class="btn" href="https://twitter-spam-detection.streamlit.app/" target="_blank" rel="noreferrer"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
           </div>
         </article>
-  
+
       </div>
     </div>
   </section>
 
 
   <!-- ================= SERVICES ================= -->
-  <section id="services">
+  <section id="services" class="reveal">
     <div class="container">
       <h2>Layanan</h2>
       <div class="grid grid-2">
         <div class="card">
           <h3>Data & Dashboard</h3>
-          <p>Menyediakan layanan analisis data mendalam, pengembangan dashboard interaktif, serta visualisasi data yang informatif dan mudah dipahami.</p>
+          <p>Menyediakan layanan analisis data mendalam, pengembangan dashboard interaktif, serta visualisasi data yang
+            informatif dan mudah dipahami.</p>
         </div>
         <div class="card">
           <h3>ML Prototyping</h3>
-          <p>Membangun prototipe model Machine Learning untuk kebutuhan klasifikasi maupun prediksi, sebagai tahap awal pengembangan solusi berbasis AI.</p>
+          <p>Membangun prototipe model Machine Learning untuk kebutuhan klasifikasi maupun prediksi, sebagai tahap awal
+            pengembangan solusi berbasis AI.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section id="contact">
+  <section id="contact" class="reveal">
     <div class="container grid grid-2">
       <div>
         <h2>Kontak</h2>
         <p>
-          Tertarik untuk berkolaborasi atau berdiskusi lebih lanjut? Silakan hubungi saya melalui formulir di samping, 
+          Tertarik untuk berkolaborasi atau berdiskusi lebih lanjut? Silakan hubungi saya melalui formulir di samping,
           atau langsung melalui detail kontak berikut.
         </p>
         <p><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</p>
-  
+
         <!-- Bagian ikon sosial -->
         <div class="social-links" style="margin-top:1rem; display:flex; gap:1rem; align-items:center;">
-          <a href="mailto:frenkygilang@gmail.com" target="_blank" aria-label="Email" 
-             style="font-size:1.6rem; color:#333;">
+          <a href="mailto:frenkygilang@gmail.com" target="_blank" aria-label="Email"
+            style="font-size:1.6rem; color:#333;">
             <i class="fa-solid fa-envelope"></i>
           </a>
-          <a href="https://www.linkedin.com/in/frenkyy" target="_blank" aria-label="LinkedIn" 
-             style="font-size:1.6rem; color:#0077b5;">
+          <a href="https://www.linkedin.com/in/frenkyy" target="_blank" aria-label="LinkedIn"
+            style="font-size:1.6rem; color:#0077b5;">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/frenskuy" target="_blank" aria-label="GitHub" 
-             style="font-size:1.6rem; color:#000;">
+          <a href="https://github.com/frenskuy" target="_blank" aria-label="GitHub"
+            style="font-size:1.6rem; color:#000;">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://www.instagram.com/frenskuyy/" target="_blank" aria-label="Instagram" 
-           style="font-size:1.6rem; color:#E4405F;">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
+          <a href="https://www.instagram.com/frenskuyy/" target="_blank" aria-label="Instagram"
+            style="font-size:1.6rem; color:#E4405F;">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
         </div>
       </div>
-  
+
       <form id="contactForm" class="card" aria-label="Form kontak">
         <input required type="text" name="nama" placeholder="Nama Lengkap" />
         <input required type="email" name="email" placeholder="Alamat Email" />
@@ -339,44 +341,274 @@
     </div>
   </section>
 
+  <!-- ================= FRAMEWORKS & TOOLS MARQUEE ================= -->
+  <style>
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 0;
+      background: transparent;
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .marquee-fade-left,
+    .marquee-fade-right {
+      position: absolute;
+      top: 0;
+      width: 120px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .marquee-fade-left {
+      left: 0;
+      background: linear-gradient(to right, var(--bg) 10%, transparent);
+    }
+
+    .marquee-fade-right {
+      right: 0;
+      background: linear-gradient(to left, var(--bg) 10%, transparent);
+    }
+
+    .marquee-content {
+      display: inline-flex;
+      width: max-content;
+    }
+
+    .marquee-content.row-1 {
+      animation: scrollLeft 35s linear infinite;
+    }
+
+    .marquee-content.row-2 {
+      animation: scrollRight 40s linear infinite;
+    }
+
+    .marquee-content.row-3 {
+      animation: scrollLeft 30s linear infinite;
+    }
+
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+
+    .fw-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.8rem 1.8rem;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      margin: 0 0.8rem;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .fw-item:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      border-color: var(--accent-2);
+      box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), inset 0 0 10px rgba(157, 78, 221, 0.2);
+    }
+
+    .fw-item img {
+      width: 28px;
+      height: 28px;
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes scrollRight {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+  <section id="frameworks" class="reveal" style="padding: 0;">
+    <h2 style="text-align: center; margin-bottom: 2rem; padding-top: 4rem;">Framework & Tool</h2>
+    <div class="marquee-container">
+      <div class="marquee-fade-left"></div>
+      <div class="marquee-fade-right"></div>
+
+      <!-- ROW 1 (Kiri) -->
+      <div class="marquee-content row-1">
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python">Python</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+            alt="R">R</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+            alt="TensorFlow">TensorFlow</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+            alt="Pandas">Pandas</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+            alt="MySQL">MySQL</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML5">HTML5</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS3">CSS3</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JS">JavaScript</span>
+
+        <!-- Duplikat -->
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python">Python</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+            alt="R">R</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+            alt="TensorFlow">TensorFlow</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+            alt="Pandas">Pandas</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+            alt="MySQL">MySQL</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML5">HTML5</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS3">CSS3</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JS">JavaScript</span>
+      </div>
+
+      <!-- ROW 2 (Kanan) -->
+      <div class="marquee-content row-2">
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+            alt="Jupyter">Jupyter</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+            alt="NumPy">NumPy</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+            alt="Streamlit">Streamlit</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+            alt="GCP">Google Cloud</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            alt="Git">Git</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub">GitHub</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+            alt="VS Code">VS Code</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+            alt="Flask">Flask</span>
+
+        <!-- Duplikat -->
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+            alt="Jupyter">Jupyter</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+            alt="NumPy">NumPy</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+            alt="Streamlit">Streamlit</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+            alt="GCP">Google Cloud</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            alt="Git">Git</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub">GitHub</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+            alt="VS Code">VS Code</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+            alt="Flask">Flask</span>
+      </div>
+
+      <!-- ROW 3 (Kiri) -->
+      <div class="marquee-content row-3">
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python">Data Science</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="SQL">Database Design</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+            alt="R">Statistical Analysis</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="AI">Deep
+          Learning</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="Web">Web Dev</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+            alt="BI">Business Intelligence</span>
+
+        <!-- Duplikat -->
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python">Data Science</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="SQL">Database Design</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+            alt="R">Statistical Analysis</span>
+        <span class="fw-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="AI">Deep
+          Learning</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="Web">Web Dev</span>
+        <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+            alt="BI">Business Intelligence</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= FOOTER ================= -->
   <footer>
-    <div class="container foot">
+    <div class="container foot"
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem;">
       <div>
-        <strong>Frenky</strong><br>
-        <span class="muted">Membangun teknologi dengan hati, untuk masa depan yang lebih baik.</span>
+        <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--text);">Frenky Gilang</h2>
+        <span class="muted" style="display: block; max-width: 500px; margin: 0 auto; line-height: 1.6;">"Membangun
+          teknologi dengan hati, untuk masa depan yang lebih baik. Terus belajar dan menciptakan solusi bermakna melalui
+          data."</span>
+      </div>
+      <div style="opacity: 0.7; font-size: 0.9rem; margin-top: 1rem;">
+        © 2024 Frenky Gilang. All rights reserved.
       </div>
     </div>
   </footer>
 
   <button id="backToTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up" style="color:#fff;"></i></button>
 
-  <script>
-    // =================== JS KECIL UNTUK INTERAKSI ===================
-    // Menu mobile
-    const menuBtn = document.getElementById('menuBtn');
-    const menu = document.getElementById('menu');
-    menuBtn?.addEventListener('click',()=> menu.classList.toggle('open'));
+  <!-- ================= MODAL PROJECT ================= -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 id="modalTitle">Project Title</h2>
+        </div>
+        <img id="modalImg" src="" alt="Project Image">
+        <div id="modalTags" class="tags"></div>
+        <p id="modalDesc" style="line-height:1.7; color:var(--muted); font-size:1.05rem;"></p>
+        <div id="modalLinks" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;"></div>
+      </div>
+    </div>
+  </div>
 
-    // Back to top
-    const topBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll',()=>{
-      topBtn.style.display = window.scrollY > 400 ? 'inline-flex' : 'none';
-    });
-    topBtn.addEventListener('click',()=> window.scrollTo({top:0,behavior:'smooth'}));
-
-    // Form kontak: kirim via mailto (tanpa backend)
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const f = new FormData(this);
-      const nama = encodeURIComponent(f.get('nama'));
-      const email = encodeURIComponent(f.get('email'));
-      const subjek = encodeURIComponent(f.get('subjek')||'Pesan dari Portfolio');
-      const pesan = encodeURIComponent(f.get('pesan'));
-      const body = `Halo, saya ${decodeURIComponent(nama)} (%3C${email}%3E)\n\n${pesan}`;
-      window.location.href = `mailto:frenkygilang@gmail.com?subject=${subjek}&body=${body}`;
-      document.getElementById('status').textContent = 'Membuka aplikasi email kamu…';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>

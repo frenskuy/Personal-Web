@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Frenky Pratama – Portfolio</title>
   <meta name="description"
-    content="Portfolio pribadi Frenky Riski Gilang Pratama – Data, Machine Learning dan Project Showcase." />
+    content="Personal portfolio of Frenky Riski Gilang Pratama – Data, Machine Learning and Project Showcase." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="img/rocket.png" type="image/png" sizes="32x32">
@@ -27,22 +27,25 @@
   <!-- ================= NAVBAR ================= -->
   <header>
     <div class="container">
-      <nav aria-label="Navigasi utama">
-        <a class="brand" href="#home" aria-label="Beranda">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Home">
           <span class="logo">
-            <img src="img/back biru.jpg" alt="Foto Frenky"
+            <img src="img/back biru.jpg" alt="Frenky Photo"
               style="width:36px;height:36px;border-radius:0%;object-fit:cover;">
           </span>
           <span>Frenky</span>
         </a>
-        <button class="mobile-toggle" id="menuBtn" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+        <button class="mobile-toggle" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
         <div class="menu" id="menu">
-          <a href="#about">Tentang</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Pengalaman</a>
-          <a href="#projects">Proyek</a>
-          <a href="#services">Layanan</a>
-          <a href="#contact">Kontak</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <button id="langToggle" aria-label="Switch language"
+            style="background:transparent;border:1px solid var(--accent-2);color:var(--accent-2);border-radius:20px;padding:0.25rem 0.75rem;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:0.05em;transition:all 0.3s;">🌐
+            EN</button>
         </div>
       </nav>
     </div>
@@ -51,18 +54,24 @@
   <!-- ================= HERO ================= -->
   <main id="home" class="hero container">
     <div>
-      <p style="letter-spacing:.15em;color:var(--accent-2);font-weight:700">DATA • MACHINE LEARNING</p>
-      <h1>Halo, saya <span style="color:var(--accent-2)"> Frenky Riski Gilang Pratama</span><br />menciptakan solusi
-        digital berbasis data.</h1>
-      <p>Saya berfokus pada pengembangan model machine learning serta visualisasi data yang informatif dan mudah
-        dipahami. Terbuka untuk kolaborasi dalam mewujudkan solusi inovatif sesuai kebutuhan Anda.</p>
+      <p style="letter-spacing:.15em;color:var(--accent-2);font-weight:700" data-i18n="hero.tagline">DATA • MACHINE
+        LEARNING</p>
+      <h1>
+        <span data-i18n="hero.greeting">Hi, I'm</span> <span style="color:var(--accent-2)"> Frenky Riski Gilang
+          Pratama</span><br />
+        <span data-i18n="hero.headline">creating digital solutions driven by data.</span>
+      </h1>
+      <p data-i18n="hero.sub">I focus on building machine learning models and creating informative, easy-to-understand
+        data visualizations. Open to collaboration to bring innovative solutions tailored to your needs.</p>
       <div class="cta">
-        <a class="btn" href="#projects"><i class="fa-solid fa-grid-2"></i> Lihat Proyek</a>
-        <a class="btn ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
+        <a class="btn" href="#projects"><i class="fa-solid fa-grid-2"></i> <span data-i18n="hero.btn.projects">View
+            Projects</span></a>
+        <a class="btn ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> <span
+            data-i18n="hero.btn.contact">Contact Me</span></a>
       </div>
     </div>
     <div class="avatar" aria-hidden="true">
-      <img src="img/DSC02041(1).jpg" alt="Foto Frenky"
+      <img src="img/DSC02041(1).jpg" alt="Frenky Photo"
         style="width:100%;height:100%;border-radius:20px;object-fit:cover;">
     </div>
   </main>
@@ -71,31 +80,30 @@
   <section id="about" class="reveal">
     <div class="container grid grid-2">
       <div>
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah seorang pengembang yang berfokus pada pengembangan solusi berbasis <strong>Machine
-            Learning</strong> dan <strong>Deep Learning</strong> (TensorFlow, PyTorch), serta pengolahan dan visualisasi
-          <strong>data</strong> menggunakan Python. Memiliki pengalaman dalam organisasi maupun proyek akademik, saya
-          terbiasa mengubah ide menjadi produk digital yang bermanfaat.
-        </p>
-        <p><em>Saat ini, saya tengah melakukan penelitian mengenai integrasi CNN dan LLM dalam klasifikasi kesehatan
-            daun, dengan tujuan mendukung inovasi di bidang pertanian cerdas.</em></p>
+        <h2 data-i18n="about.title">About Me</h2>
+        <p data-i18n="about.p1">I am a developer focused on building <strong>Machine Learning</strong> and <strong>Deep
+            Learning</strong> solutions (TensorFlow, PyTorch), as well as data processing and visualization using
+          Python. With experience in academic projects and organizations, I am used to turning ideas into useful digital
+          products.</p>
+        <p><em data-i18n="about.p2">I am currently conducting research on the integration of CNN and LLM in leaf health
+            classification, aiming to support innovation in smart agriculture.</em></p>
 
-        <!-- Tombol unduh CV -->
+        <!-- CV Download button -->
         <a class="btn" href="asset/CV FRENKY UPDATE.pdf" target="_blank" download="CV_Frenky_Riski_Gilang_Pratama.pdf">
-          <i class="fa-solid fa-file-arrow-down"></i> Unduh CV
+          <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="about.cv">Download CV</span>
         </a>
       </div>
 
       <div class="card">
-        <h3 style="margin-top:0">Info Singkat</h3>
+        <h3 style="margin-top:0" data-i18n="about.info.title">Quick Info</h3>
         <div class="grid" style="grid-template-columns:150px 1fr;gap:.6rem .8rem">
-          <div class="muted">Lokasi</div>
+          <div class="muted" data-i18n="about.info.location">Location</div>
           <div>Indonesia</div>
-          <div class="muted">Email</div>
+          <div class="muted" data-i18n="about.info.email">Email</div>
           <div><a href="mailto:frenkygilang@gmail.com">frenkygilang@gmail.com</a></div>
-          <div class="muted">Status</div>
-          <div>Available for freelance</div>
-          <div class="muted">Bahasa</div>
+          <div class="muted" data-i18n="about.info.status">Status</div>
+          <div data-i18n="about.info.statusVal">Available for freelance</div>
+          <div class="muted" data-i18n="about.info.lang">Language</div>
           <div>ID, EN</div>
         </div>
       </div>
@@ -105,7 +113,7 @@
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="reveal">
     <div class="container">
-      <h2>Keterampilan Teknis</h2>
+      <h2 data-i18n="skills.title">Technical Skills</h2>
       <div class="skills grid grid-3">
         <div class="skill"><strong>Python</strong>
           <span class="percent-tooltip" style="left: 90%;">90%</span>
@@ -134,30 +142,45 @@
   <!-- ================= EXPERIENCE ================= -->
   <section id="experience" class="reveal">
     <div class="container">
-      <h2>Pengalaman</h2>
+      <h2 data-i18n="exp.title">Experience</h2>
       <div class="timeline">
         <div class="t-item card">
-          <div class="when">2024 • Studi Independent</div>
+          <div class="when" data-i18n="exp.psds.when">2025 • Instructor & Mentor</div>
           <div>
-            <h3 style="margin:.2rem 0">Machine Learning Cohort at Bangkit Academy</h3>
-            <p>Mempelajari dan mengimplementasikan machine learning dan deep learning dalam proyek capstone.
-              Mengembangkan model klasifikasi berbasis TensorFlow dan mengintegrasikan ke dalam solusi digital.</p>
+            <h3 style="margin:.2rem 0" data-i18n="exp.psds.role">Mentor – Advanced Class PSDS 9.0</h3>
+            <p data-i18n="exp.psds.desc">Guided participants through understanding and implementing Convolutional Neural
+              Networks (CNN) from fundamentals to advanced topics. Curriculum covered 9 notebook modules: Data
+              Augmentation, Convolutional Layer, Pooling Layer, Activation Function, Fully Connected Layer, Bias vs No
+              Bias, Model Training, Training with Augmentation, and Model Evaluation.</p>
+            <a href="https://github.com/frenskuy/PSDS-MAHIR-CNN-" target="_blank" rel="noreferrer"
+              style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.5rem;font-size:0.9rem;color:var(--accent-2);text-decoration:none;">
+              <i class="fa-brands fa-github"></i> <span data-i18n="exp.psds.link">View Materials on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="t-item card">
+          <div class="when" data-i18n="exp.bangkit.when">2024 • Independent Study</div>
+          <div>
+            <h3 style="margin:.2rem 0" data-i18n="exp.bangkit.role">Machine Learning Cohort at Bangkit Academy</h3>
+            <p data-i18n="exp.bangkit.desc">Studied and implemented machine learning and deep learning in a capstone
+              project. Developed a TensorFlow-based classification model and integrated it into a digital solution.</p>
           </div>
         </div>
         <div class="t-item card">
-          <div class="when">2024 • Kegiatan Organisasi</div>
+          <div class="when" data-i18n="exp.bem1.when">2024 • Organizational Activity</div>
           <div>
-            <h3 style="margin:.2rem 0">Ketua Departemen PSDM BEM FAST</h3>
-            <p>Memimpin perencanaan dan pelaksanaan program pengembangan sumber daya mahasiswa. Mengkoordinasikan tim
-              dalam pelatihan, peningkatan soft skills, serta penguatan budaya organisasi.</p>
+            <h3 style="margin:.2rem 0" data-i18n="exp.bem1.role">Head of PSDM Department – BEM FAST</h3>
+            <p data-i18n="exp.bem1.desc">Led the planning and execution of student development programs. Coordinated the
+              team in training, soft skill enhancement, and strengthening organizational culture.</p>
           </div>
         </div>
         <div class="t-item card">
-          <div class="when">2023 • Kegiatan Organisasi</div>
+          <div class="when" data-i18n="exp.bem2.when">2023 • Organizational Activity</div>
           <div>
-            <h3 style="margin:.2rem 0">Anggota Departemen PSDM BEM FAST</h3>
-            <p>Berpartisipasi dalam merancang dan melaksanakan program kerja terkait pengembangan mahasiswa. Mendukung
-              kegiatan pelatihan, mentoring, dan peningkatan kapasitas organisasi.</p>
+            <h3 style="margin:.2rem 0" data-i18n="exp.bem2.role">Member of PSDM Department – BEM FAST</h3>
+            <p data-i18n="exp.bem2.desc">Participated in designing and implementing work programs related to student
+              development. Supported training, mentoring, and organizational capacity-building activities.</p>
           </div>
         </div>
       </div>
@@ -167,69 +190,133 @@
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="reveal">
     <div class="container">
-      <h2>Proyek Terkini</h2>
+      <h2 data-i18n="projects.title">Recent Projects</h2>
       <div class="grid grid-3">
 
-        <!-- Proyek 1: Analisis Penyewaan Sepeda -->
+        <!-- Project 6: All CNN Optimizer Study -->
         <article class="project card">
-          <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/bike rental.png" alt="Thumbnail Proyek Analisis Penyewaan Sepeda"
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/cnn optimizer study.png" alt="All CNN Optimizer Study"
               style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
-          <h3>Analisis Penyewaan Sepeda</h3>
-          <p>Eksplorasi dan analisis data penyewaan sepeda menggunakan Python untuk memahami pola penggunaan, faktor
-            musiman, dan tren permintaan.</p>
+          <h3 data-i18n="proj.cnnopt.title">All CNN Optimizer Study</h3>
+          <p data-i18n="proj.cnnopt.desc">Comparative evaluation of 6 CNN architectures x 4 optimizers for leukemia (ALL) detection. Xception + RMSprop achieves 99.69% accuracy.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">CNN</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Research</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn"
+              data-title-en="All CNN Optimizer Study"
+              data-title-id="Studi Optimizer CNN untuk Klasifikasi ALL"
+              data-desc-en="This research systematically evaluates 6 CNN architectures (VGG16, ResNet50, MobileNetV2, EfficientNetB0, InceptionV3, Xception) combined with 4 optimizers (Adam, SGD, RMSprop, Adagrad) for Acute Lymphoblastic Leukemia (ALL) image classification. Results are presented through an interactive web showcase with charts and performance tables. The best combination - Xception + RMSprop - achieves 99.69% accuracy, demonstrating the critical role of optimizer selection in medical imaging tasks."
+              data-desc-id="Penelitian ini secara sistematis mengevaluasi 6 arsitektur CNN (VGG16, ResNet50, MobileNetV2, EfficientNetB0, InceptionV3, Xception) yang dikombinasikan dengan 4 optimizer (Adam, SGD, RMSprop, Adagrad) untuk klasifikasi citra Acute Lymphoblastic Leukemia (ALL). Hasil disajikan melalui web interaktif dengan grafik dan tabel performa. Kombinasi terbaik - Xception + RMSprop - mencapai akurasi 99.69%, membuktikan peran krusial pemilihan optimizer pada tugas pencitraan medis."
+              data-img="img/cnn optimizer study.png"
+              data-tags="Python,CNN,TensorFlow,Keras,RMSprop,Medical Imaging,Research"
+              data-link="https://frenskuy.github.io/All-CNN-Optimizer-Study/">
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
+            </button>
+            <a class="btn" href="https://frenskuy.github.io/All-CNN-Optimizer-Study/" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="proj.btn.link">Live Demo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Hybrid CNN & LLM -->
+        <article class="project card">
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/hybrid cnn llm.png" alt="Hybrid CNN and LLM Leaf Classification"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+          </div>
+          <h3 data-i18n="proj.cnnllm.title">Hybrid CNN & LLM – Leaf Health Classification</h3>
+          <p data-i18n="proj.cnnllm.desc">Integrating CNN for visual feature extraction from leaf images with LLM to
+            generate natural language explanations of plant health classification results.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">CNN</span>
+            <span class="tag">LLM</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
+            <button class="btn ghost detail-btn" data-title-en="Hybrid CNN &amp; LLM – Leaf Health Classification"
+              data-title-id="Hybrid CNN &amp; LLM – Klasifikasi Kesehatan Daun"
+              data-desc-en="This research project integrates a Convolutional Neural Network (CNN) as a visual feature extractor on plant leaf images, combined with a Large Language Model (LLM) that generates scientific explanations and natural-language recommendations. The CNN classifies leaf health conditions (healthy, spotted, wilted, etc.), while the LLM translates prediction results into narratives easily understood by farmers or researchers. This hybrid approach is an innovative solution for smart agriculture."
+              data-desc-id="Proyek penelitian ini mengintegrasikan Convolutional Neural Network (CNN) sebagai ekstraktor fitur visual pada citra daun tanaman dengan Large Language Model (LLM) yang bertugas menghasilkan penjelasan ilmiah dan rekomendasi berbasis bahasa natural. CNN mengklasifikasikan kondisi kesehatan daun (sehat, bercak, layu, dll.), sementara LLM menerjemahkan hasil prediksi menjadi narasi yang mudah dipahami petani maupun peneliti. Pendekatan hybrid ini merupakan solusi inovatif untuk pertanian cerdas (smart agriculture)."
+              data-img="img/hybrid cnn llm.png" data-tags="Python,CNN,LLM,TensorFlow,Streamlit,Smart Agriculture"
+              data-link="https://llm-explain.streamlit.app/">
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
+            </button>
+            <a class="btn" href="https://llm-explain.streamlit.app/" target="_blank" rel="noreferrer"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="proj.btn.link">Live Demo</span></a>
+          </div>
+        </article>
+
+        <!-- Project 1: Bike Rental Analysis -->
+        <article class="project card">
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/bike rental.png" alt="Bike Rental Analysis"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+          </div>
+          <h3 data-i18n="proj.bike.title">Bike Rental Analysis</h3>
+          <p data-i18n="proj.bike.desc">Exploration and analysis of bike rental data using Python to understand usage
+            patterns, seasonal factors, and demand trends.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Pandas</span>
             <span class="tag">Matplotlib</span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-            <button class="btn ghost detail-btn" data-title="Analisis Penyewaan Sepeda"
-              data-desc="Proyek ini melakukan eksplorasi dan analisis komprehensif terhadap dataset penyewaan sepeda. Analisis mencakup pola penyewaan harian, dampak kondisi cuaca, serta identifikasi hari-hari dengan penyewaan tertinggi. Melalui visualisasi data yang mendalam, kita dapat memahami karakteristik pengguna serta tren musiman yang memengaruhi jumlah penyewaan. Insight ini sangat berguna untuk perencanaan alokasi sepeda di masa mendatang."
+            <button class="btn ghost detail-btn" data-title-en="Bike Rental Analysis"
+              data-title-id="Analisis Penyewaan Sepeda"
+              data-desc-en="This project performs a comprehensive exploration and analysis of a bike rental dataset. The analysis covers daily rental patterns, the impact of weather conditions, and identification of peak rental days. Through in-depth data visualization, we gain insight into user characteristics and seasonal trends affecting the number of rentals. These insights are highly useful for planning future bike allocation."
+              data-desc-id="Proyek ini melakukan eksplorasi dan analisis komprehensif terhadap dataset penyewaan sepeda. Analisis mencakup pola penyewaan harian, dampak kondisi cuaca, serta identifikasi hari-hari dengan penyewaan tertinggi. Melalui visualisasi data yang mendalam, kita dapat memahami karakteristik pengguna serta tren musiman yang memengaruhi jumlah penyewaan. Insight ini sangat berguna untuk perencanaan alokasi sepeda di masa mendatang."
               data-img="img/bike rental.png" data-tags="Python,Pandas,Matplotlib,Seaborn,Streamlit"
               data-link="https://frenkydataanalysisproject.streamlit.app/">
-              <i class="fa-solid fa-eye"></i> Detail
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
             </button>
             <a class="btn" href="https://frenkydataanalysisproject.streamlit.app/" target="_blank" rel="noreferrer"><i
-                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
+                class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="proj.btn.link">Live Demo</span></a>
           </div>
         </article>
 
-        <!-- Proyek 2: Dashboard Analisis Kualitas Udara Dunia -->
+        <!-- Project 2: World Air Quality Dashboard -->
         <article class="project card">
-          <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/kualitas udaraa.png" alt="Thumbnail Proyek Dashboard Analisis Kualitas Udara Dunia"
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/kualitas udaraa.png" alt="World Air Quality Dashboard"
               style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
-          <h3>Dashboard Analisis Kualitas Udara Dunia</h3>
-          <p>Pengembangan dashboard interaktif untuk memantau kualitas udara global menggunakan machine learning dan
-            visualisasi data.</p>
+          <h3 data-i18n="proj.air.title">World Air Quality Dashboard</h3>
+          <p data-i18n="proj.air.desc">Development of an interactive dashboard to monitor global air quality using
+            machine learning and data visualization.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Streamlit</span>
             <span class="tag">Data Visualization</span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-            <button class="btn ghost detail-btn" data-title="Dashboard Analisis Kualitas Udara Dunia"
-              data-desc="Dashboard interaktif yang menampilkan tingkat kualitas udara di berbagai negara. Proyek ini mengintegrasikan model Machine Learning dan visualisasi data yang memukau untuk memprediksi serta memantau indeks polutan. Cocok bagi para peneliti lingkungan maupun institusi kesehatan untuk memahami skala polusi di sejumlah wilayah penting."
+            <button class="btn ghost detail-btn" data-title-en="World Air Quality Dashboard"
+              data-title-id="Dashboard Analisis Kualitas Udara Dunia"
+              data-desc-en="An interactive dashboard displaying air quality levels across various countries. This project integrates Machine Learning models and stunning data visualizations to predict and monitor pollutant indices. Suitable for environmental researchers and health institutions looking to understand pollution levels across key regions."
+              data-desc-id="Dashboard interaktif yang menampilkan tingkat kualitas udara di berbagai negara. Proyek ini mengintegrasikan model Machine Learning dan visualisasi data yang memukau untuk memprediksi serta memantau indeks polutan. Cocok bagi para peneliti lingkungan maupun institusi kesehatan untuk memahami skala polusi di sejumlah wilayah penting."
               data-img="img/kualitas udaraa.png" data-tags="Python,Streamlit,Data Visualization,Machine Learning"
               data-link="https://ml-kualitasudara.streamlit.app/">
-              <i class="fa-solid fa-eye"></i> Detail
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
             </button>
             <a class="btn" href="https://ml-kualitasudara.streamlit.app/" target="_blank" rel="noreferrer"><i
-                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
+                class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="proj.btn.link">Live Demo</span></a>
           </div>
         </article>
 
-        <!-- Proyek 3: Klasifikasi Anjing dan Kucing -->
+        <!-- Project 3: Dog and Cat Classification -->
         <article class="project card">
-          <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/klasifikasi hewan.png" alt="Thumbnail Proyek Klasifikasi Anjing dan Kucing"
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/klasifikasi hewan.png" alt="Dog and Cat Classification"
               style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
-          <h3>Klasifikasi Anjing dan Kucing</h3>
-          <p>Pembuatan model deep learning untuk mengklasifikasikan citra anjing dan kucing menggunakan Vision
+          <h3 data-i18n="proj.pet.title">Dog & Cat Classification</h3>
+          <p data-i18n="proj.pet.desc">Building a deep learning model to classify images of dogs and cats using Vision
             Transformer (ViT).</p>
           <div class="tags">
             <span class="tag">Python</span>
@@ -237,40 +324,44 @@
             <span class="tag">Deep Learning</span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-            <button class="btn ghost detail-btn" data-title="Klasifikasi Anjing dan Kucing"
-              data-desc="Proyek ini mengimplementasikan arsitektur Vision Transformer (ViT) menggunakan PyTorch untuk mengklasifikasikan gambar hewan menjadi dua kategori: Anjing atau Kucing. Model dilatih dari awal (atau dengan fine-tuning) dan disajikan dalam bentuk antarmuka web yang dapat menerima unggahan gambar langsung dari pengguna, memberikan prediksi secara akurat dalam hitungan detik."
+            <button class="btn ghost detail-btn" data-title-en="Dog &amp; Cat Classification"
+              data-title-id="Klasifikasi Anjing dan Kucing"
+              data-desc-en="This project implements the Vision Transformer (ViT) architecture using PyTorch to classify animal images into two categories: Dog or Cat. The model is trained from scratch (or fine-tuned) and served through a web interface that accepts direct image uploads from users, delivering accurate predictions in seconds."
+              data-desc-id="Proyek ini mengimplementasikan arsitektur Vision Transformer (ViT) menggunakan PyTorch untuk mengklasifikasikan gambar hewan menjadi dua kategori: Anjing atau Kucing. Model dilatih dari awal (atau dengan fine-tuning) dan disajikan dalam bentuk antarmuka web yang dapat menerima unggahan gambar langsung dari pengguna, memberikan prediksi secara akurat dalam hitungan detik."
               data-img="img/klasifikasi hewan.png" data-tags="Python,PyTorch,Deep Learning,Vision Transformer,Streamlit"
               data-link="https://ml-klasifikasi-anjing-kucing.streamlit.app/">
-              <i class="fa-solid fa-eye"></i> Detail
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
             </button>
             <a class="btn" href="https://ml-klasifikasi-anjing-kucing.streamlit.app/" target="_blank"
-              rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
+              rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                data-i18n="proj.btn.link">Live Demo</span></a>
           </div>
         </article>
 
-        <!-- Proyek 4: Spam Detection -->
+        <!-- Project 4: Spam Detection -->
         <article class="project card">
-          <div class="thumb" aria-label="Thumbnail proyek">
-            <img src="img/spam detection.png" alt="Thumbnail Proyek Spam Detection"
+          <div class="thumb" aria-label="Project thumbnail">
+            <img src="img/spam detection.png" alt="Spam Detection"
               style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
           </div>
-          <h3>Spam Detection</h3>
-          <p>Pengembangan sistem deteksi spam pada Twitter menggunakan LLM (IBM Granite) dan visualisasi interaktif
-            dengan Streamlit.</p>
+          <h3 data-i18n="proj.spam.title">Spam Detection</h3>
+          <p data-i18n="proj.spam.desc">Development of a Twitter spam detection system using LLM (IBM Granite) with
+            interactive visualizations built with Streamlit.</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Large Language Models</span>
             <span class="tag">Streamlit</span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-            <button class="btn ghost detail-btn" data-title="Spam Detection"
-              data-desc="Aplikasi ini menggunakan Large Language Model (khususnya IBM Granite) untuk menganalisis teks dari cuitan Twitter dan menentukan apakah teks tersebut termasuk spam atau bukan. Sistem ini dirancang dengan antarmuka yang sangat ramah pengguna menggunakan Streamlit, memungkinkan demonstrasi model bahasa yang mutakhir di lingkungan web secara praktis."
+            <button class="btn ghost detail-btn" data-title-en="Spam Detection" data-title-id="Spam Detection"
+              data-desc-en="This application uses a Large Language Model (specifically IBM Granite) to analyze text from tweets and determine whether the text is spam or not. The system features a highly user-friendly interface built with Streamlit, enabling a practical demonstration of state-of-the-art language models in a web environment."
+              data-desc-id="Aplikasi ini menggunakan Large Language Model (khususnya IBM Granite) untuk menganalisis teks dari cuitan Twitter dan menentukan apakah teks tersebut termasuk spam atau bukan. Sistem ini dirancang dengan antarmuka yang sangat ramah pengguna menggunakan Streamlit, memungkinkan demonstrasi model bahasa yang mutakhir di lingkungan web secara praktis."
               data-img="img/spam detection.png" data-tags="Python,LLM,IBM Granite,Streamlit,NLP"
               data-link="https://twitter-spam-detection.streamlit.app/">
-              <i class="fa-solid fa-eye"></i> Detail
+              <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
             </button>
             <a class="btn" href="https://twitter-spam-detection.streamlit.app/" target="_blank" rel="noreferrer"><i
-                class="fa-solid fa-arrow-up-right-from-square"></i> Link Web</a>
+                class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="proj.btn.link">Live Demo</span></a>
           </div>
         </article>
 
@@ -282,17 +373,17 @@
   <!-- ================= SERVICES ================= -->
   <section id="services" class="reveal">
     <div class="container">
-      <h2>Layanan</h2>
+      <h2 data-i18n="services.title">Services</h2>
       <div class="grid grid-2">
         <div class="card">
-          <h3>Data & Dashboard</h3>
-          <p>Menyediakan layanan analisis data mendalam, pengembangan dashboard interaktif, serta visualisasi data yang
-            informatif dan mudah dipahami.</p>
+          <h3 data-i18n="services.data.title">Data & Dashboard</h3>
+          <p data-i18n="services.data.desc">Providing in-depth data analysis, development of interactive dashboards, and
+            informative data visualizations that are easy to understand.</p>
         </div>
         <div class="card">
-          <h3>ML Prototyping</h3>
-          <p>Membangun prototipe model Machine Learning untuk kebutuhan klasifikasi maupun prediksi, sebagai tahap awal
-            pengembangan solusi berbasis AI.</p>
+          <h3 data-i18n="services.ml.title">ML Prototyping</h3>
+          <p data-i18n="services.ml.desc">Building Machine Learning model prototypes for classification or prediction
+            needs, as the initial stage of AI-based solution development.</p>
         </div>
       </div>
     </div>
@@ -302,14 +393,12 @@
   <section id="contact" class="reveal">
     <div class="container grid grid-2">
       <div>
-        <h2>Kontak</h2>
-        <p>
-          Tertarik untuk berkolaborasi atau berdiskusi lebih lanjut? Silakan hubungi saya melalui formulir di samping,
-          atau langsung melalui detail kontak berikut.
-        </p>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.sub">Interested in collaborating or discussing further? Feel free to reach out via the
+          form, or directly through the contact details below.</p>
         <p><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</p>
 
-        <!-- Bagian ikon sosial -->
+        <!-- Social icons -->
         <div class="social-links" style="margin-top:1rem; display:flex; gap:1rem; align-items:center;">
           <a href="mailto:frenkygilang@gmail.com" target="_blank" aria-label="Email"
             style="font-size:1.6rem; color:#333;">
@@ -330,12 +419,14 @@
         </div>
       </div>
 
-      <form id="contactForm" class="card" aria-label="Form kontak">
-        <input required type="text" name="nama" placeholder="Nama Lengkap" />
-        <input required type="email" name="email" placeholder="Alamat Email" />
-        <input type="text" name="subjek" placeholder="Subjek" />
-        <textarea name="pesan" placeholder="Pesan Anda"></textarea>
-        <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</button>
+      <form id="contactForm" class="card" aria-label="Contact form">
+        <input required type="text" name="nama" data-i18n-placeholder="contact.form.name" placeholder="Full Name" />
+        <input required type="email" name="email" data-i18n-placeholder="contact.form.email"
+          placeholder="Email Address" />
+        <input type="text" name="subjek" data-i18n-placeholder="contact.form.subject" placeholder="Subject" />
+        <textarea name="pesan" data-i18n-placeholder="contact.form.message" placeholder="Your Message"></textarea>
+        <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> <span
+            data-i18n="contact.form.send">Send Message</span></button>
         <p id="status" class="muted" style="color:var(--muted)"></p>
       </form>
     </div>
@@ -449,12 +540,12 @@
   </style>
 
   <section id="frameworks" class="reveal" style="padding: 0;">
-    <h2 style="text-align: center; margin-bottom: 2rem; padding-top: 4rem;">Framework & Tool</h2>
+    <h2 style="text-align: center; margin-bottom: 2rem; padding-top: 4rem;" data-i18n="fw.title">Frameworks & Tools</h2>
     <div class="marquee-container">
       <div class="marquee-fade-left"></div>
       <div class="marquee-fade-right"></div>
 
-      <!-- ROW 1 (Kiri) -->
+      <!-- ROW 1 (Left) -->
       <div class="marquee-content row-1">
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             alt="Python">Python</span>
@@ -476,7 +567,7 @@
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
             alt="JS">JavaScript</span>
 
-        <!-- Duplikat -->
+        <!-- Duplicate -->
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             alt="Python">Python</span>
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
@@ -498,7 +589,7 @@
             alt="JS">JavaScript</span>
       </div>
 
-      <!-- ROW 2 (Kanan) -->
+      <!-- ROW 2 (Right) -->
       <div class="marquee-content row-2">
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
             alt="Jupyter">Jupyter</span>
@@ -519,7 +610,7 @@
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
             alt="Flask">Flask</span>
 
-        <!-- Duplikat -->
+        <!-- Duplicate -->
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
             alt="Jupyter">Jupyter</span>
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
@@ -540,7 +631,7 @@
             alt="Flask">Flask</span>
       </div>
 
-      <!-- ROW 3 (Kiri) -->
+      <!-- ROW 3 (Left) -->
       <div class="marquee-content row-3">
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             alt="Python">Data Science</span>
@@ -556,7 +647,7 @@
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
             alt="BI">Business Intelligence</span>
 
-        <!-- Duplikat -->
+        <!-- Duplicate -->
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             alt="Python">Data Science</span>
         <span class="fw-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
@@ -580,9 +671,9 @@
       style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem;">
       <div>
         <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--text);">Frenky Gilang</h2>
-        <span class="muted" style="display: block; max-width: 500px; margin: 0 auto; line-height: 1.6;">"Membangun
-          teknologi dengan hati, untuk masa depan yang lebih baik. Terus belajar dan menciptakan solusi bermakna melalui
-          data."</span>
+        <span class="muted" style="display: block; max-width: 500px; margin: 0 auto; line-height: 1.6;"
+          data-i18n="footer.quote">"Building technology with heart, for a better future. Continuously learning and
+          creating meaningful solutions through data."</span>
       </div>
       <div style="opacity: 0.7; font-size: 0.9rem; margin-top: 1rem;">
         © 2024 Frenky Gilang. All rights reserved.
@@ -590,7 +681,7 @@
     </div>
   </footer>
 
-  <button id="backToTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up" style="color:#fff;"></i></button>
+  <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up" style="color:#fff;"></i></button>
 
   <!-- ================= MODAL PROJECT ================= -->
   <div id="projectModal" class="modal">

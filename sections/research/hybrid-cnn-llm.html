@@ -1,0 +1,126 @@
+<!-- Research Card: Hybrid CNN & LLM Dashboard -->
+<article class="card research-card reveal-right" style="display:flex;flex-direction:column;gap:1rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--accent),#a855f7);border-radius:4px 0 0 4px;"></div>
+  <div style="padding-left:0.5rem;">
+    <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;">
+      <span style="background:rgba(157,78,221,0.15);border:1px solid rgba(157,78,221,0.4);color:#c084fc;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;padding:0.2rem 0.6rem;border-radius:999px;"
+        data-i18n="research.badge.agri">SMART AGRICULTURE</span>
+      <span style="color:var(--muted);font-size:0.82rem;">2026</span>
+    </div>
+    <h3 style="margin:0 0 0.5rem;" data-i18n="research.cnnllm.title">Hybrid CNN &amp; LLM – Plant Disease Dashboard</h3>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;" data-i18n="research.cnnllm.desc">An interactive
+      research dashboard visualizing the performance results of a Hybrid CNN and LLM model for image-based
+      classification of plant leaf diseases. Presents metrics, charts, and findings in an accessible research
+      interface.</p>
+    <div class="tags" style="margin-top:0.75rem;">
+      <span class="tag">Python</span>
+      <span class="tag">CNN</span>
+      <span class="tag">LLM</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">Plant Disease</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:0.6rem;flex-wrap:wrap;padding-left:0.5rem;margin-top:auto;">
+    <a class="btn" href="https://frenskuy.github.io/Dashboard-CNN-LLM/" target="_blank" rel="noreferrer">
+      <i class="fa-solid fa-chart-line"></i> <span data-i18n="research.btn.dashboard">View Dashboard</span>
+    </a>
+    <button class="btn ghost detail-btn"
+      data-title-en="Hybrid CNN &amp; LLM – Plant Disease Dashboard"
+      data-title-id="Dashboard Hybrid CNN &amp; LLM – Penyakit Daun Tanaman"
+      data-desc-en="This study proposed a hybrid framework integrating a <strong>Convolutional Neural Network (CNN)</strong> with a <strong>Large Language Model (LLM)</strong> to perform image-based plant leaf disease classification accompanied by interpretable diagnostic explanations.<br><br><strong>EfficientNetV2-M</strong> was employed as the visual backbone and trained on 11 selected classes of apple, grape, and potato leaf images. The model delivered highly consistent predictions, reaching a peak test accuracy of <strong>99.79%</strong>. To overcome the black-box limitation, prediction outputs were transformed into structured prompts and processed by <strong>GPT-4o</strong>."
+      data-desc-id="Penelitian ini mengusulkan kerangka kerja hibrida yang mengintegrasikan <strong>Convolutional Neural Network (CNN)</strong> dengan <strong>Large Language Model (LLM)</strong> untuk melakukan klasifikasi penyakit daun tanaman berbasis citra yang disertai penjelasan diagnostik.<br><br><strong>EfficientNetV2-M</strong> digunakan sebagai arsitektur visual dan dilatih pada 11 kelas citra daun apel, anggur, dan kentang. Model ini memberikan prediksi yang konsisten, mencapai akurasi pengujian puncak <strong>99.79%</strong>. Untuk mengatasi batasan <em>black-box</em>, output prediksi ditransformasikan menjadi prompt terstruktur dan diproses oleh <strong>GPT-4o</strong>."
+      data-img="img/hybrid cnn llm.png"
+      data-tags="CNN,LLM,Next.js,Python,TensorFlow,Plant Disease,Research"
+      data-link="https://frenskuy.github.io/Dashboard-CNN-LLM/">
+      <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
+    </button>
+  </div>
+
+  <!-- RICH DETAIL EN -->
+  <div class="rich-desc-en" style="display:none;">
+    <h3 class="cs-title">1. Background & Introduction</h3>
+    <p>Plant diseases continue to threaten global agricultural productivity and food security. Conventional approaches to leaf disease identification—primarily visual examination by experts—are slow, labor-intensive, and susceptible to human error. There is an urgent need for an automated system to detect plant diseases early.</p>
+    
+    <h3 class="cs-title">2. Research Overview</h3>
+    <p>This study proposed a hybrid framework integrating a <strong>Convolutional Neural Network (CNN)</strong> with a <strong>Large Language Model (LLM)</strong> to perform image-based plant leaf disease classification accompanied by interpretable diagnostic explanations.</p>
+    
+    <h3 class="cs-title">3. Performance Highlights</h3>
+    <div class="cs-metric-grid">
+      <div class="cs-metric">
+        <span class="value">99.79%</span>
+        <span class="label">Peak Accuracy</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">11</span>
+        <span class="label">Plant Classes</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">GPT-4o</span>
+        <span class="label">LLM Core</span>
+      </div>
+    </div>
+
+    <h3 class="cs-title">4. Methodology & Architecture</h3>
+    <div class="cs-features">
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-microchip"></i>
+        <div>
+          <h4>Visual Backbone</h4>
+          <p><strong>EfficientNetV2-M</strong> was employed and trained on apple, grape, and potato leaf images from the PlantVillage dataset representing diverse visual disease patterns.</p>
+        </div>
+      </div>
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-robot"></i>
+        <div>
+          <h4>Interpretable Diagnostics</h4>
+          <p>To overcome the black-box limitation of CNNs, prediction outputs from the visual models were transformed into structured prompts and parsed by the LLM to yield human-readable intervention steps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RICH DETAIL ID -->
+  <div class="rich-desc-id" style="display:none;">
+    <h3 class="cs-title">1. Latar Belakang & Introduksi</h3>
+    <p>Penyakit tanaman terus menjadi ancaman serius bagi ketahanan pangan dan produktivitas pertanian. Pendekatan konvensional berupa inspeksi visual oleh pakar seringkali berjalan lambat, padat karya, dan rentan terhadap subjektivitas. Oleh karena itu, otomasi deteksi dini berbasis kecerdasan buatan sangat dibutuhkan.</p>
+
+    <h3 class="cs-title">2. Ikhtisar Riset</h3>
+    <p>Penelitian ini mengusulkan kerangka kerja hibrida yang mengintegrasikan <strong>Convolutional Neural Network (CNN)</strong> dengan <strong>Large Language Model (LLM)</strong> untuk melakukan klasifikasi penyakit daun tanaman berbasis citra yang disertai penjelasan diagnostik komprehensif.</p>
+    
+    <h3 class="cs-title">3. Sorotan Performa</h3>
+    <div class="cs-metric-grid">
+      <div class="cs-metric">
+        <span class="value">99.79%</span>
+        <span class="label">Akurasi Puncak</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">11</span>
+        <span class="label">Kelas Daun</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">GPT-4o</span>
+        <span class="label">Inti LLM</span>
+      </div>
+    </div>
+
+    <h3 class="cs-title">4. Metodologi & Arsitektur</h3>
+    <div class="cs-features">
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-microchip"></i>
+        <div>
+          <h4>Arsitektur Visual</h4>
+          <p><strong>EfficientNetV2-M</strong> digunakan untuk klasifikasi visual pola penyakit daun (Apel, Anggur, Kentang) secara langsung dari citra <em>dataset</em> PlantVillage.</p>
+        </div>
+      </div>
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-robot"></i>
+        <div>
+          <h4>Kecerdasan Generatif</h4>
+          <p>Batas 'kotak hitam' dieleminir dengan menempatkan LLM paska-prediksi untuk menghasilkan wawasan saintifik dan rekomendasi penanganan tanaman dalam bahasa natural.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<template></body></template>

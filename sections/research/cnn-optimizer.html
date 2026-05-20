@@ -1,0 +1,126 @@
+<!-- Research Card: All CNN Optimizer Study -->
+<article class="card research-card reveal-left" style="display:flex;flex-direction:column;gap:1rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--accent-2),var(--accent));border-radius:4px 0 0 4px;"></div>
+  <div style="padding-left:0.5rem;">
+    <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;">
+      <span style="background:rgba(0,245,255,0.1);border:1px solid rgba(0,245,255,0.3);color:var(--accent-2);font-size:0.72rem;font-weight:700;letter-spacing:0.06em;padding:0.2rem 0.6rem;border-radius:999px;"
+        data-i18n="research.badge.medical">MEDICAL IMAGING</span>
+      <span style="color:var(--muted);font-size:0.82rem;">2025</span>
+    </div>
+    <h3 style="margin:0 0 0.5rem;" data-i18n="research.cnnopt.title">All CNN Optimizer Study</h3>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;" data-i18n="research.cnnopt.desc">Systematic
+      evaluation of 6 CNN architectures combined with 4 optimizers for Acute Lymphoblastic Leukemia (ALL) detection.
+      The best combination — Xception + RMSprop — achieves <strong style="color:var(--accent-2);">99.69%
+        accuracy</strong>.</p>
+    <div class="tags" style="margin-top:0.75rem;">
+      <span class="tag">Python</span>
+      <span class="tag">CNN</span>
+      <span class="tag">TensorFlow</span>
+      <span class="tag">Medical AI</span>
+      <span class="tag">Xception</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:0.6rem;flex-wrap:wrap;padding-left:0.5rem;margin-top:auto;">
+    <a class="btn" href="https://frenskuy.github.io/All-CNN-Optimizer-Study/" target="_blank" rel="noreferrer">
+      <i class="fa-solid fa-chart-line"></i> <span data-i18n="research.btn.dashboard">View Dashboard</span>
+    </a>
+    <button class="btn ghost detail-btn"
+      data-title-en="All CNN Optimizer Study"
+      data-title-id="Studi Optimizer CNN untuk Klasifikasi ALL"
+      data-desc-en="This study examines the impact of different optimizers on the performance of multiple CNN architectures for classifying Peripheral Blood Smear (PBS) images.<br><br>Six CNN models (<strong>ResNet50V2, Xception, EfficientNetB2, EfficientNetB4, EfficientNetV2-S, EfficientNetV2-M</strong>) were trained using four optimizers: <strong>Adam, AdamW, NAdam, and RMSprop</strong> using an 80:10:10 ratio split. Experimental results reveal that the <strong>Xception</strong> model combined with <strong>RMSprop</strong> achieved the highest performance, reaching an accuracy of <strong>99.69%</strong> with a loss of 0.0194."
+      data-desc-id="Penelitian ini menguji dampak dari berbagai optimizer terhadap performa beberapa arsitektur CNN dalam mengklasifikasikan citra <em>Peripheral Blood Smear</em> (PBS).<br><br>Enam model CNN (<strong>ResNet50V2, Xception, EfficientNetB2, EfficientNetB4, EfficientNetV2-S, EfficientNetV2-M</strong>) dilatih menggunakan empat optimizer: <strong>Adam, AdamW, NAdam, dan RMSprop</strong> menggunakan rasio dataset 80:10:10. Hasil eksperimen mengungkapkan bahwa model <strong>Xception</strong> dikombinasikan dengan <strong>RMSprop</strong> mencapai kinerja tertinggi, meraih akurasi <strong>99.69%</strong> dengan loss sebesar 0.0194."
+      data-img="img/cnn optimizer study.png"
+      data-tags="Python,CNN,TensorFlow,Keras,RMSprop,Medical Imaging,Research"
+      data-link="https://frenskuy.github.io/All-CNN-Optimizer-Study/">
+      <i class="fa-solid fa-eye"></i> <span data-i18n="proj.btn.detail">Detail</span>
+    </button>
+  </div>
+
+  <!-- RICH DETAIL EN -->
+  <div class="rich-desc-en" style="display:none;">
+    <h3 class="cs-title">1. Background & Introduction</h3>
+    <p>The rapid development of deep learning in recent years has significantly impacted computer vision. Convolutional Neural Networks (CNN) allow autonomous extraction of intricate representations from large-scale medical data, eliminating reliance on handcrafted feature design. However, CNN effectiveness depends heavily on the optimization algorithm used during training.</p>
+    
+    <h3 class="cs-title">2. Research Overview</h3>
+    <p>This study examines the impact of different optimizers on the performance of multiple CNN architectures for classifying Peripheral Blood Smear (PBS) images into Acute Lymphoblastic Leukemia (ALL) states.</p>
+    
+    <h3 class="cs-title">3. Models & Optimizers</h3>
+    <div class="cs-metric-grid">
+      <div class="cs-metric">
+        <span class="value">6</span>
+        <span class="label">Architectures</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">4</span>
+        <span class="label">Optimizers</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">3.2k</span>
+        <span class="label">Images</span>
+      </div>
+    </div>
+
+    <h3 class="cs-title">4. Key Results & Findings</h3>
+    <div class="cs-features">
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-trophy"></i>
+        <div>
+          <h4>Highest Performance</h4>
+          <p>The <strong>Xception</strong> model combined with <strong>RMSprop</strong> achieved an outstanding accuracy of <strong>99.69%</strong> with a loss of 0.0194 using an 80:10:10 dataset split.</p>
+        </div>
+      </div>
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-code-compare"></i>
+        <div>
+          <h4>Underperforming Setup</h4>
+          <p>In contrast, ResNet50V2 showed the weakest performance, demonstrating the critical dependency of architectural success on the chosen mathematical optimizer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RICH DETAIL ID -->
+  <div class="rich-desc-id" style="display:none;">
+    <h3 class="cs-title">1. Latar Belakang & Introduksi</h3>
+    <p>Perkembangan pesat *deep learning* telah memberikan dampak signifikan pada visi komputer (*computer vision*). Jaringan saraf tiruan (CNN) memungkinkan ekstraksi pola yang rumit dari data medis berukuran besar secara otomatis. Namun, efektivitas arsitektur CNN sangat dikontrol oleh algoritma optimasi (*optimizer*) yang digunakan selama pelatihan.</p>
+
+    <h3 class="cs-title">2. Ikhtisar Riset</h3>
+    <p>Penelitian ini menguji dampak dari berbagai algoritma *optimizer* terhadap performa arsitektur CNN kontemporer dalam mengklasifikasikan citra *Peripheral Blood Smear (PBS)* untuk mendeteksi *Acute Lymphoblastic Leukemia (ALL)*.</p>
+    
+    <h3 class="cs-title">3. Konfigurasi Evaluasi</h3>
+    <div class="cs-metric-grid">
+      <div class="cs-metric">
+        <span class="value">6</span>
+        <span class="label">Arsitektur</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">4</span>
+        <span class="label">Optimizer</span>
+      </div>
+      <div class="cs-metric">
+        <span class="value">3.2rb</span>
+        <span class="label">Dataset Citra</span>
+      </div>
+    </div>
+
+    <h3 class="cs-title">4. Temuan & Hasil Utama</h3>
+    <div class="cs-features">
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-trophy"></i>
+        <div>
+          <h4>Kinerja Tertinggi</h4>
+          <p>Kombinasi model <strong>Xception</strong> dengan <strong>RMSprop</strong> berhasil mencapai akurasi tertinggi sebesar <strong>99.69%</strong> dengan tingkat <em>loss</em> 0.0194 menggunakan pembagian data 80:10:10.</p>
+        </div>
+      </div>
+      <div class="cs-feature-item">
+        <i class="fa-solid fa-code-compare"></i>
+        <div>
+          <h4>Anomali Performa</h4>
+          <p>Meskipun mutakhir, <em>ResNet50V2</em> justru menunjukan performa terlemah, membuktikan secara empiris bahwa kecocokan antara arsitektur dan optimizer matematis sangatlah vital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<template></body></template>

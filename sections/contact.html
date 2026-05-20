@@ -1,0 +1,44 @@
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container grid grid-2">
+    <div class="reveal-left">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.sub">Interested in collaborating or discussing further? Feel free to reach out via the
+        form, or directly through the contact details below.</p>
+      <p><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</p>
+
+      <!-- Social icons -->
+      <div class="social-links" style="margin-top:1rem; display:flex; gap:1rem; align-items:center;">
+        <a href="mailto:frenkygilang@gmail.com" target="_blank" aria-label="Email"
+          style="font-size:1.6rem; color:#333;">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/frenkyy" target="_blank" aria-label="LinkedIn"
+          style="font-size:1.6rem; color:#0077b5;">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/frenskuy" target="_blank" aria-label="GitHub"
+          style="font-size:1.6rem; color:#000;">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/frenskuyy/" target="_blank" aria-label="Instagram"
+          style="font-size:1.6rem; color:#E4405F;">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="card reveal-right" aria-label="Contact form">
+      <input required type="text" name="nama" data-i18n-placeholder="contact.form.name" placeholder="Full Name" />
+      <input required type="email" name="email" data-i18n-placeholder="contact.form.email"
+        placeholder="Email Address" />
+      <input type="text" name="subjek" data-i18n-placeholder="contact.form.subject" placeholder="Subject" />
+      <textarea name="pesan" data-i18n-placeholder="contact.form.message" placeholder="Your Message"></textarea>
+      <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> <span
+          data-i18n="contact.form.send">Send Message</span></button>
+      <p id="status" class="muted" style="color:var(--muted)"></p>
+    </form>
+  </div>
+</section>
+
+<template></body></template>
